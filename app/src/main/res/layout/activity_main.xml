@@ -7,15 +7,69 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:onClick="getData"
+    <EditText
+        android:id="@+id/etRollNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="rollno"
+        android:textSize="20sp"
+
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Name"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/etRollNo"
+        app:layout_constraintStart_toStartOf="@+id/etRollNo"
+        app:layout_constraintTop_toBottomOf="@id/etRollNo" />
+
+    <EditText
+        android:id="@+id/etAdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Address"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/etStudent"
+        app:layout_constraintStart_toStartOf="@+id/etStudent"
+        app:layout_constraintTop_toBottomOf="@id/etStudent" />
+
+    <EditText
+        android:id="@+id/etStream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Stream"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/etAdress"
+        app:layout_constraintStart_toStartOf="@+id/etAdress"
+        app:layout_constraintTop_toBottomOf="@id/etAdress" />
+
+
+    <Button
+        android:id="@+id/btnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etStream"
+        app:layout_constraintEnd_toEndOf="@+id/etStream"
+        app:layout_constraintStart_toStartOf="@+id/etStream"
+        android:layout_marginTop="35dp"
+        android:text="Submit"
+        android:textStyle="bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

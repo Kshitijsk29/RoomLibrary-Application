@@ -6,14 +6,16 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverter
 import androidx.room.TypeConverters
+import androidx.room.migration.Migration
 
 
-@Database(entities =[UserEntity::class], version = 1)
+@Database(entities =[UserEntity::class], version = 2)
 @TypeConverters(Convetors::class)
 abstract class AppDatabase : RoomDatabase(){
     abstract fun  userDao():UserDao
 
     companion object{
+
         @Volatile
         private var INSTANCE : AppDatabase? = null
 
@@ -28,7 +30,6 @@ abstract class AppDatabase : RoomDatabase(){
                     ).build()
                 }
             }
-
             return INSTANCE!!
         }
     }

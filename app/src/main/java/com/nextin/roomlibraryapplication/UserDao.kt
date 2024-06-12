@@ -5,6 +5,7 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface UserDao {
@@ -14,6 +15,9 @@ interface UserDao {
 
     @Insert
     suspend fun insertAll(vararg user : UserEntity)
+
+    @Update
+    suspend fun updateAll(vararg user :UserEntity)
 
     @Delete
     suspend fun deleteAll( user:UserEntity)
