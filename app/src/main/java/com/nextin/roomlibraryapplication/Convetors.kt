@@ -3,7 +3,6 @@ package com.nextin.roomlibraryapplication
 import androidx.room.TypeConverter
 import java.util.Date
 
-
 class Convetors {
 
     @TypeConverter
