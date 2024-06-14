@@ -60,7 +60,6 @@
         app:layout_constraintStart_toStartOf="@+id/etAdress"
         app:layout_constraintTop_toBottomOf="@id/etAdress" />
 
-
     <Button
         android:id="@+id/btnClick"
         android:layout_width="wrap_content"
