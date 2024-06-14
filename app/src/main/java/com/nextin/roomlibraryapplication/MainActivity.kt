@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.nextin.roomlibraryapplication.data.AppDatabase
+import com.nextin.roomlibraryapplication.data.UserEntity
 import com.nextin.roomlibraryapplication.databinding.ActivityMainBinding
 
 import kotlinx.coroutines.GlobalScope
@@ -26,11 +28,13 @@ class MainActivity : AppCompatActivity() {
      // calling suspend function
         binding.btnClick.setOnClickListener{
             GlobalScope.launch{
-                database.userDao().insertAll(UserEntity(0,
+                database.userDao().insertAll(
+                    UserEntity(0,
                     Integer.parseInt(binding.etRollNo.text.toString()),
                     binding.etStudent.text.toString(),
                     binding.etAdress.text.toString(),
-                    binding.etStream.text.toString()))
+                    binding.etStream.text.toString())
+                )
         }
             Toast.makeText(this, "Successful",
                 Toast.LENGTH_LONG).show()
